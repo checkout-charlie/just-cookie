@@ -1,0 +1,30 @@
+{
+  "name": "just-cookie",
+  "version": "0.1.0",
+  "description": "a drop in replacement of browser-cookie-light",
+  "main": "src/justCookie.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "./node_modules/.bin/eslint src/justCookie.js"
+  },
+  "author": "Ronald Schmidt <ronald.schmidt@sparwelt.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "uglifyjs-webpack-plugin": "^0.4.3",
+    "webpack": "2.6.*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparwelt/just-cookie.git"
+  },
+  "keywords": [
+    "cookie",
+    "javascript"
+  ]
+}
