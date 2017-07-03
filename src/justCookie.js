@@ -1,6 +1,7 @@
 ;(function () {
-  var justCookie, object
-  justCookie = function (name, value, ttl, path, domain, secure) {
+  var object = typeof exports !== 'undefined' ? exports : this
+
+  var cookie = function (name, value, ttl, path, domain, secure) {
     if (arguments.length > 1) {
       document.cookie = name + '=' + encodeURIComponent(value) +
                 (ttl ? '; expires=' + new Date(+new Date() + (ttl * 1000)).toUTCString() : '') +
@@ -12,7 +13,6 @@
     return decodeURIComponent((('; ' + document.cookie).split('; ' + name + '=')[1] || '').split(';')[0])
   }
 
-  object = typeof exports !== 'undefined' ? exports : this
-  object.cookie = justCookie
-  module.exports = justCookie
+  object = cookie
+  module.exports = cookie
 }())
